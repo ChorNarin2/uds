@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "image": "/assets/Uni/Aupp.jpeg",
+        "name": "Aupp"
+    },
+    {
+        "id": 2,
+        "image": "/assets/Uni/Belti.jpeg",
+        "name": "Belti"
+    },
+    {
+        "id": 3,
+        "image": "/assets/Uni/Buildbright.jpeg",
+        "name": "Buildbright"
+    },
+    {
+        "id": 4,
+        "image": "/assets/Uni/Norton.jpeg",
+        "name": "Norton"
+    },
+    {
+        "id": 5,
+        "image": "/assets/Uni/Num.jpg",
+        "name": "Num"
+    },
+    {
+        "id": 6,
+        "image": "/assets/Uni/Rua.jpeg",
+        "name": "Rua"
+    },
+    {
+        "id": 7,
+        "image": "/assets/Uni/uc.jpg",
+        "name": "Uc"
+    }
+
+]
