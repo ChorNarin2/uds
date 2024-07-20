@@ -10,12 +10,9 @@ const Page = () => {
         <div className="max-w-md mx-auto bg-white rounded-lg overflow-hidden md:max-w-lg">
           <div className="md:flex">
             <div className="w-full px-4 py-6">
-
-              
-            <div className="mb-4">
+              <div className="mb-4">
                 <DropdownUni/>
               </div>
-
               <div className="mb-4">
                 <label htmlFor="course" className="block text-sm font-medium text-gray-700">Course</label>
                 <input type="text" id="course" name="course" className="h-12 px-3 w-full border-blue-400 border-2 rounded focus:outline-none focus:border-blue-600" />

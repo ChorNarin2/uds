@@ -1,38 +1,52 @@
-import React from 'react'
+'use client'
 
-const DropdownUni = () => {
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import ClickOutside from "@/components/ClickOutside";
+
+const DropdownUser = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   return (
-    <div>
-    
-        <div className="max-w-lg mx-auto">
+    <ClickOutside onClick={() => setDropdownOpen(false)} className="relative">
+      <Link onClick={() => setDropdownOpen(!dropdownOpen)} className="flex items-center gap-4" href="#" >
+      <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+            University
+</button>      </Link>
+
+      {/* <!-- Dropdown Start --> */}
+      {dropdownOpen && (
+        <div className={`absolute right-0 mt-4 flex w-62.5 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark`} >
+          <ul className="flex flex-col gap-5 border-b border-stroke px-6 py-7.5 dark:border-strokedark">
+            <li>
+              <Link href="/profile" className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base ">
+                <h1 className="bg-gray-500 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l" >ITC</h1>
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base">
+              <h1>RUPP</h1>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/settings"
+                className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
+              >
+                RULE
+              </Link>
+            </li>
+          </ul>
+          <button className="flex items-center gap-3.5 px-6 py-4 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base">
             
-            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center" type="button" data-dropdown-toggle="dropdown">Dropdown button <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-
-            <div className="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown">
-                <div className="px-4 py-3">
-                <span className="block text-sm">Bonnie Green</span>
-                <span className="block text-sm font-medium text-gray-900 truncate">name@flowbite.com</span>
-                </div>
-                <ul className="py-1" aria-labelledby="dropdown">
-                <li>
-                    <a href="#" className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Dashboard</a>
-                </li>
-                <li>
-                    <a href="#" className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Settings</a>
-                </li>
-                <li>
-                    <a href="#" className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Earnings</a>
-                </li>
-                <li>
-                    <a href="#" className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign out</a>
-                </li>
-                </ul>
-            </div>
-
+            Log Out
+          </button>
         </div>
-
-    </div>
+      )}
+      {/* <!-- Dropdown End --> */}
+    </ClickOutside>
   );
-}
+};
 
-export default DropdownUni
+export default DropdownUser;

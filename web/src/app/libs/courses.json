@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",
+        "name": "ITC",
+        "url": "./Course/ITC.tsx",
+        "course_type": "Theory"
+    },
+    {
+        "id": "2",
+        "name": "RUPP",
+        "url": "./Course/RUPP.tsx",
+        "course_type": "Theory"
+    }
+]
